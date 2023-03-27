@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.61.1
+
+ - First Sub-alteration to include options to connect to 3rd party MQTT
+
 ## 0.61
 
  - Use sensor instead of number for pulses
