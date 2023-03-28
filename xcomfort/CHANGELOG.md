@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.61.1 -0.61.3
+
+ - Minor modifications
+
 ## 0.61.1
 
  - First Sub-alteration to include options to connect to 3rd party MQTT
