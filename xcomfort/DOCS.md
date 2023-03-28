@@ -1,6 +1,6 @@
 # Home Assistant Add-on: xComfort
 
-xComfort is a wireless European home automation system, using the 868,3MHz band. The system is closed source. This code was reverse engineered from a variety of sources, without documentation from Eaton, and may not follow their specifications.
+xComfort is a wireless European home automation system, using the 868,3MHz band. The system is closed source. This code was reverse engineered (by Karl Oygard - link below) from a variety of sources, without documentation from Eaton, and may not follow their specifications.
 
 This code supports both extended and regular status messages. Older devices only send the latter, which are not routed and have no delivery guarantees. Careful placement of the CI is important, so that it can see these messages, or you will need to use more than one CI to improve coverage.
 
@@ -36,6 +36,10 @@ Add-on configuration:
 
 ```yaml
 mqtt_client_id: xcomfort
+mqtt_host: core_mosquitto
+mqtt_port: 1883
+mqtt_user: ""
+mqtt_passwd: ""
 eprom: true
 datapoints_file: ""
 verbose: false
@@ -49,6 +53,24 @@ ha_discovery_remove: false
 ### Option: `mqtt_client_id`
 
 ID of the MQTT client the daemon connects with. 
+
+### Option: `mqtt_host`
+
+ID (intenal name; IP or DNS name) of the MQTT host to send the MQTT messages to. 
+Default = core_mosquitto (this is the standard internal host name Hassio assign to the default Mosquitto plugin)
+
+### Option: `mqtt_port`
+
+The port that the host is listening on.
+Default = 1883; this is the non-ssl port.
+
+### Option: `mqtt_user`
+
+The username used to connect to the host with. 
+
+### Option: `mqtt_passwd`
+
+The password for the user to connect to the host with.
 
 ### Option: `eprom`
 
@@ -86,7 +108,8 @@ Talk to USB sticks with hidapi.  Hidapi appears to have intermittent issues, and
 
 MIT License
 
-Copyright (c) 2021 Karl Anders Øygard and Guðmundur Björn Birkisson
+Original Copyright (c) 2021 Karl Anders Øygard and Guðmundur Björn Birkisson
+Additional Copyright (C) 2023 Davy Geurts (Kooda)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
