@@ -3,7 +3,7 @@
     "version": "0.61.2.1",
     "slug": "xcomfort-3rd",
     "description": "Eaton xComfort to (3rd party) MQTT gateway",
-    "url": https://github.com/geurtsd/hassio-addons
+    "url": https://github.com/geurtsd/hassio-addons,
     "startup": "application",
     "boot": "auto",
     "arch": [
