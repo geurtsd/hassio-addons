@@ -1,6 +1,6 @@
 {
     "name": "xComfort-3rd",
-    "version": "0.61.3.1",
+    "version": "0.61.3",
     "slug": "xcomfort-3rd",
     "description": "Eaton xComfort to (3rd party) MQTT gateway",
     "startup": "application",
@@ -26,7 +26,7 @@
     "options": {
         "mqtt_client_id": "xcomfort",
         "mqtt_host": "core_mosquitto",
-	"mqtt_port": "1883",
+	"mqtt_port": 1883,
         "mqtt_user": "",
         "mqtt_passwd": "",
         "datapoints_file": "",
