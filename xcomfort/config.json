@@ -44,7 +44,7 @@
         "mqtt_host": "str",
 		"mqtt_port": "str",
         "mqtt_user": "str",
-        "mqtt_passwd": "str",
+        "mqtt_passwd": "pwd",
         "datapoints_file": "str",
         "eprom": "bool",
         "ha_discovery": "bool",
