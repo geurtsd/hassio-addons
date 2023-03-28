@@ -26,7 +26,7 @@
     "options": {
         "mqtt_client_id": "xcomfort",
         "mqtt_host": "core_mosquitto",
-		"mqtt_port": "1883",
+	"mqtt_port": "1883",
         "mqtt_user": "",
         "mqtt_passwd": "",
         "datapoints_file": "",
@@ -41,9 +41,9 @@
     "schema": {
         "mqtt_client_id": "str",
         "mqtt_host": "str",
-		"mqtt_port": "str",
+	"mqtt_port": "int",
         "mqtt_user": "str",
-        "mqtt_passwd": "pwd",
+        "mqtt_passwd": "password",
         "datapoints_file": "str",
         "eprom": "bool",
         "ha_discovery": "bool",
